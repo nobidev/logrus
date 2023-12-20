@@ -46,7 +46,7 @@ func TestNoFieldValueError(t *testing.T) {
 	require.False(t, ok)
 }
 
-func TestWarninglnNotEqualToWarning(t *testing.T) {
+func TestWarnlnNotEqualToWarn(t *testing.T) {
 	buf := &bytes.Buffer{}
 	bufln := &bytes.Buffer{}
 
@@ -60,17 +60,17 @@ func TestWarninglnNotEqualToWarning(t *testing.T) {
 		Hooks:     make(LevelHooks),
 		Level:     DebugLevel,
 	}
-	l.Warning("hello,", "world")
+	l.Warn("hello,", "world")
 
 	l.SetOutput(bufln)
-	l.Warningln("hello,", "world")
+	l.Warnln("hello,", "world")
 
-	assert.NotEqual(t, buf.String(), bufln.String(), "Warning() and Wantingln() should not be equal")
+	assert.NotEqual(t, buf.String(), bufln.String(), "Warn() and Warnln() should not be equal")
 }
 
 type testBufferPool struct {
 	buffers []*bytes.Buffer
-	get int
+	get     int
 }
 
 func (p *testBufferPool) Get() *bytes.Buffer {

@@ -211,17 +211,17 @@ func TestPadLevelText(t *testing.T) {
 		{
 			name:            "PanicLevel",
 			level:           PanicLevel,
-			paddedLevelText: "PANIC  ", // 2 extra spaces
+			paddedLevelText: "PANIC",
 		},
 		{
 			name:            "FatalLevel",
 			level:           FatalLevel,
-			paddedLevelText: "FATAL  ", // 2 extra spaces
+			paddedLevelText: "FATAL",
 		},
 		{
 			name:            "ErrorLevel",
 			level:           ErrorLevel,
-			paddedLevelText: "ERROR  ", // 2 extra spaces
+			paddedLevelText: "ERROR",
 		},
 		{
 			name:  "WarnLevel",
@@ -231,17 +231,17 @@ func TestPadLevelText(t *testing.T) {
 		{
 			name:            "DebugLevel",
 			level:           DebugLevel,
-			paddedLevelText: "DEBUG  ", // 2 extra spaces
+			paddedLevelText: "DEBUG",
 		},
 		{
 			name:            "TraceLevel",
 			level:           TraceLevel,
-			paddedLevelText: "TRACE  ", // 2 extra spaces
+			paddedLevelText: "TRACE",
 		},
 		{
 			name:            "InfoLevel",
 			level:           InfoLevel,
-			paddedLevelText: "INFO   ", // 3 extra spaces
+			paddedLevelText: "INFO ", // 1 extra spaces
 		},
 	}
 
@@ -348,7 +348,7 @@ func TestTextFormatterFieldMap(t *testing.T) {
 
 	assert.Equal(t,
 		`timeywimey="1981-02-24T04:28:03Z" `+
-			`somelevel=warning `+
+			`somelevel=warn `+
 			`message="oh hi" `+
 			`field1=f1 `+
 			`fields.message=messagefield `+

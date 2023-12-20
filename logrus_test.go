@@ -129,7 +129,7 @@ func TestWarn(t *testing.T) {
 		log.Warn("test")
 	}, func(fields Fields) {
 		assert.Equal(t, "test", fields["msg"])
-		assert.Equal(t, "warning", fields["level"])
+		assert.Equal(t, "warn", fields["level"])
 	})
 }
 
@@ -138,7 +138,7 @@ func TestLog(t *testing.T) {
 		log.Log(WarnLevel, "test")
 	}, func(fields Fields) {
 		assert.Equal(t, "test", fields["msg"])
-		assert.Equal(t, "warning", fields["level"])
+		assert.Equal(t, "warn", fields["level"])
 	})
 }
 
@@ -468,7 +468,7 @@ func TestConvertLevelToString(t *testing.T) {
 	assert.Equal(t, "trace", TraceLevel.String())
 	assert.Equal(t, "debug", DebugLevel.String())
 	assert.Equal(t, "info", InfoLevel.String())
-	assert.Equal(t, "warning", WarnLevel.String())
+	assert.Equal(t, "warn", WarnLevel.String())
 	assert.Equal(t, "error", ErrorLevel.String())
 	assert.Equal(t, "fatal", FatalLevel.String())
 	assert.Equal(t, "panic", PanicLevel.String())
@@ -699,7 +699,7 @@ func TestEntryWriter(t *testing.T) {
 	err = json.Unmarshal(bs, &fields)
 	assert.Nil(t, err)
 	assert.Equal(t, fields["foo"], "bar")
-	assert.Equal(t, fields["level"], "warning")
+	assert.Equal(t, fields["level"], "warn")
 }
 
 func TestLogLevelEnabled(t *testing.T) {

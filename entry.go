@@ -325,10 +325,6 @@ func (entry *Entry) Warn(args ...interface{}) {
 	entry.Log(WarnLevel, args...)
 }
 
-func (entry *Entry) Warning(args ...interface{}) {
-	entry.Warn(args...)
-}
-
 func (entry *Entry) Error(args ...interface{}) {
 	entry.Log(ErrorLevel, args...)
 }
@@ -370,10 +366,6 @@ func (entry *Entry) Warnf(format string, args ...interface{}) {
 	entry.Logf(WarnLevel, format, args...)
 }
 
-func (entry *Entry) Warningf(format string, args ...interface{}) {
-	entry.Warnf(format, args...)
-}
-
 func (entry *Entry) Errorf(format string, args ...interface{}) {
 	entry.Logf(ErrorLevel, format, args...)
 }
@@ -413,10 +405,6 @@ func (entry *Entry) Println(args ...interface{}) {
 
 func (entry *Entry) Warnln(args ...interface{}) {
 	entry.Logln(WarnLevel, args...)
-}
-
-func (entry *Entry) Warningln(args ...interface{}) {
-	entry.Warnln(args...)
 }
 
 func (entry *Entry) Errorln(args ...interface{}) {

@@ -65,7 +65,7 @@ func (level Level) MarshalText() ([]byte, error) {
 	case InfoLevel:
 		return []byte("info"), nil
 	case WarnLevel:
-		return []byte("warning"), nil
+		return []byte("warn"), nil
 	case ErrorLevel:
 		return []byte("error"), nil
 	case FatalLevel:
@@ -145,7 +145,6 @@ type FieldLogger interface {
 	Infof(format string, args ...interface{})
 	Printf(format string, args ...interface{})
 	Warnf(format string, args ...interface{})
-	Warningf(format string, args ...interface{})
 	Errorf(format string, args ...interface{})
 	Fatalf(format string, args ...interface{})
 	Panicf(format string, args ...interface{})
@@ -154,7 +153,6 @@ type FieldLogger interface {
 	Info(args ...interface{})
 	Print(args ...interface{})
 	Warn(args ...interface{})
-	Warning(args ...interface{})
 	Error(args ...interface{})
 	Fatal(args ...interface{})
 	Panic(args ...interface{})
@@ -163,7 +161,6 @@ type FieldLogger interface {
 	Infoln(args ...interface{})
 	Println(args ...interface{})
 	Warnln(args ...interface{})
-	Warningln(args ...interface{})
 	Errorln(args ...interface{})
 	Fatalln(args ...interface{})
 	Panicln(args ...interface{})

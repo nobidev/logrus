@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package logrus_test
@@ -38,6 +39,6 @@ func Example_hook() {
 
 	// Output:
 	// level=info msg="A group of walrus emerges from the ocean" animal=walrus size=10
-	// level=warning msg="The group's number increased tremendously!" number=122 omg=true
+	// level=warn msg="The group's number increased tremendously!" number=122 omg=true
 	// level=error msg="The ice breaks!" number=100 omg=true
 }

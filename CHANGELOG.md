@@ -74,7 +74,7 @@ This new release introduces:
   * Add `Entry.WithContext()` and `Entry.Context`, to set a context on entries to be used e.g. in hooks (#919).
 
 Fixes:
-  * Fix wrong method calls `Logger.Print` and `Logger.Warningln` (#893).
+  * Fix wrong method calls `Logger.Print` and `Logger.Warnln` (#893).
   * Update `Entry.Logf` to not do string formatting unless the log level is enabled (#903)
   * Fix infinite recursion on unknown `Level.String()` (#907)
   * Fix race condition in `getCaller` (#916).

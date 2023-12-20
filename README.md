@@ -292,7 +292,7 @@ A list of currently known service hooks can be found in this wiki [page](https:/
 
 #### Level logging
 
-Logrus has seven logging levels: Trace, Debug, Info, Warning, Error, Fatal and Panic.
+Logrus has seven logging levels: Trace, Debug, Info, Warn, Error, Fatal and Panic.
 
 ```go
 log.Trace("Something very low level.")

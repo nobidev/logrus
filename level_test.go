@@ -42,7 +42,7 @@ func TestLevelMarshalText(t *testing.T) {
 		"panic",
 		"fatal",
 		"error",
-		"warning",
+		"warn",
 		"info",
 		"debug",
 		"trace",

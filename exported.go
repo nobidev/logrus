@@ -114,11 +114,6 @@ func Warn(args ...interface{}) {
 	std.Warn(args...)
 }
 
-// Warning logs a message at level Warn on the standard logger.
-func Warning(args ...interface{}) {
-	std.Warning(args...)
-}
-
 // Error logs a message at level Error on the standard logger.
 func Error(args ...interface{}) {
 	std.Error(args...)
@@ -157,11 +152,6 @@ func InfoFn(fn LogFunction) {
 // WarnFn logs a message from a func at level Warn on the standard logger.
 func WarnFn(fn LogFunction) {
 	std.WarnFn(fn)
-}
-
-// WarningFn logs a message from a func at level Warn on the standard logger.
-func WarningFn(fn LogFunction) {
-	std.WarningFn(fn)
 }
 
 // ErrorFn logs a message from a func at level Error on the standard logger.
@@ -204,11 +194,6 @@ func Warnf(format string, args ...interface{}) {
 	std.Warnf(format, args...)
 }
 
-// Warningf logs a message at level Warn on the standard logger.
-func Warningf(format string, args ...interface{}) {
-	std.Warningf(format, args...)
-}
-
 // Errorf logs a message at level Error on the standard logger.
 func Errorf(format string, args ...interface{}) {
 	std.Errorf(format, args...)
@@ -247,11 +232,6 @@ func Infoln(args ...interface{}) {
 // Warnln logs a message at level Warn on the standard logger.
 func Warnln(args ...interface{}) {
 	std.Warnln(args...)
-}
-
-// Warningln logs a message at level Warn on the standard logger.
-func Warningln(args ...interface{}) {
-	std.Warningln(args...)
 }
 
 // Errorln logs a message at level Error on the standard logger.
