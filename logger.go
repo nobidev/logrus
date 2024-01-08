@@ -44,12 +44,15 @@ type Logger struct {
 	entryPool sync.Pool
 	// Function to exit the application, defaults to `os.Exit()`
 	ExitFunc exitFunc
+	// Function to panic the application, defaults to `panic`
+	PanicFunc panicFunc
 	// The buffer pool used to format the log. If it is nil, the default global
 	// buffer pool will be used.
 	BufferPool BufferPool
 }
 
 type exitFunc func(int)
+type panicFunc func(interface{})
 
 type MutexWrap struct {
 	lock     sync.Mutex

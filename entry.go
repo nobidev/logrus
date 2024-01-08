@@ -257,7 +257,11 @@ func (entry *Entry) log(level Level, msg string) {
 	// panic() to use in Entry#Panic(), we avoid the allocation by checking
 	// directly here.
 	if level <= PanicLevel {
-		panic(newEntry)
+		if newEntry.Logger != nil && newEntry.Logger.PanicFunc != nil {
+			newEntry.Logger.PanicFunc(newEntry)
+		} else {
+			panic(newEntry)
+		}
 	}
 }
 
